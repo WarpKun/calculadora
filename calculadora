@@ -1,0 +1,23 @@
+numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+class Calculadora:
+
+  def soma (self ,x , y):
+    return x + y
+  def diminuir (self, x , y):
+    return x - y
+
+  def multiplicar (self, x, y ):
+    return x * y
+
+  def dividir (self, x , y):
+    return x / y
+
+calculadora = Calculadora()
+somas= list(map(calculadora.soma, numeros[::2], numeros[1::2]))
+print(somas)
+
+for i in range(0, len(numeros),3):
+  if i +1 < len(numeros):
+    resultado = calculadora.soma(numeros[i], numeros[i+1])
+    print(resultado)
